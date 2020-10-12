@@ -38,7 +38,7 @@ class Lambda(nn.Module):
 
 
 with torch.no_grad():
-    true_y = odeint(Lambda(), true_y0, t, method='dopri5')
+    true_y = odeint(Lambda(), true_y0, t, method=args.method)
 
 
 def get_batch():
